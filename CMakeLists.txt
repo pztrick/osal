@@ -229,23 +229,23 @@ target_include_directories(osal_${OSAL_SYSTEM_OSTYPE}_impl PRIVATE
 
 set(OSAL_SRCLIST
     src/os/shared/src/osapi-binsem.c
-    src/os/shared/src/osapi-clock.c
+    # src/os/shared/src/osapi-clock.c
     src/os/shared/src/osapi-common.c
     src/os/shared/src/osapi-countsem.c
-    src/os/shared/src/osapi-dir.c
-    src/os/shared/src/osapi-errors.c
-    src/os/shared/src/osapi-file.c
-    src/os/shared/src/osapi-filesys.c
+    # src/os/shared/src/osapi-dir.c
+    # src/os/shared/src/osapi-errors.c
+    # src/os/shared/src/osapi-file.c
+    # src/os/shared/src/osapi-filesys.c
     src/os/shared/src/osapi-heap.c
     src/os/shared/src/osapi-idmap.c
-    src/os/shared/src/osapi-module.c
+    # src/os/shared/src/osapi-module.c
     src/os/shared/src/osapi-mutex.c
-    src/os/shared/src/osapi-network.c
+    # src/os/shared/src/osapi-network.c
     src/os/shared/src/osapi-printf.c
     src/os/shared/src/osapi-queue.c
-    src/os/shared/src/osapi-select.c
-    src/os/shared/src/osapi-shell.c
-    src/os/shared/src/osapi-sockets.c
+    # src/os/shared/src/osapi-select.c
+    # src/os/shared/src/osapi-shell.c
+    # src/os/shared/src/osapi-sockets.c
     src/os/shared/src/osapi-task.c
     src/os/shared/src/osapi-timebase.c
     src/os/shared/src/osapi-time.c
@@ -256,7 +256,6 @@ if (OSAL_CONFIG_DEBUG_PRINTF)
         src/os/shared/src/osapi-debug.c
     )
 endif (OSAL_CONFIG_DEBUG_PRINTF)
-
 
 # Define the external "osal" static library target
 # This is a combination of the generic parts with the low level

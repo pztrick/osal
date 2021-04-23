@@ -49,7 +49,7 @@
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketOpen_Impl(uint32 sock_id)
+int32 OS_SocketOpen_Impl(const OS_object_token_t *token)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketOpen_Impl */
@@ -62,7 +62,7 @@ int32 OS_SocketOpen_Impl(uint32 sock_id)
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketBind_Impl(uint32 sock_id, const OS_SockAddr_t *Addr)
+int32 OS_SocketBind_Impl(const OS_object_token_t *token, const OS_SockAddr_t *Addr)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketBind_Impl */
@@ -75,7 +75,7 @@ int32 OS_SocketBind_Impl(uint32 sock_id, const OS_SockAddr_t *Addr)
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketConnect_Impl(uint32 sock_id, const OS_SockAddr_t *Addr, int32 timeout)
+int32 OS_SocketConnect_Impl(const OS_object_token_t *token, const OS_SockAddr_t *Addr, int32 timeout)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketConnect_Impl */
@@ -88,7 +88,7 @@ int32 OS_SocketConnect_Impl(uint32 sock_id, const OS_SockAddr_t *Addr, int32 tim
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketAccept_Impl(uint32 sock_id, uint32 connsock_id, OS_SockAddr_t *Addr, int32 timeout)
+int32 OS_SocketAccept_Impl(const OS_object_token_t *sock_token, const OS_object_token_t *conn_token, OS_SockAddr_t *Addr, int32 timeout)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketAccept_Impl */
@@ -101,7 +101,7 @@ int32 OS_SocketAccept_Impl(uint32 sock_id, uint32 connsock_id, OS_SockAddr_t *Ad
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketRecvFrom_Impl(uint32 sock_id, void *buffer, size_t buflen, OS_SockAddr_t *RemoteAddr, int32 timeout)
+int32 OS_SocketRecvFrom_Impl(const OS_object_token_t *token, void *buffer, size_t buflen, OS_SockAddr_t *RemoteAddr, int32 timeout)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketRecvFrom_Impl */
@@ -114,7 +114,7 @@ int32 OS_SocketRecvFrom_Impl(uint32 sock_id, void *buffer, size_t buflen, OS_Soc
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketSendTo_Impl(uint32 sock_id, const void *buffer, size_t buflen, const OS_SockAddr_t *RemoteAddr)
+int32 OS_SocketSendTo_Impl(const OS_object_token_t *token, const void *buffer, size_t buflen, const OS_SockAddr_t *RemoteAddr)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketSendTo_Impl */
@@ -127,7 +127,7 @@ int32 OS_SocketSendTo_Impl(uint32 sock_id, const void *buffer, size_t buflen, co
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketGetInfo_Impl(uint32 sock_id, OS_socket_prop_t *sock_prop)
+int32 OS_SocketGetInfo_Impl(const OS_object_token_t *token, OS_socket_prop_t *sock_prop)
 {
     return OS_SUCCESS;
 } /* end OS_SocketGetInfo_Impl */
@@ -153,7 +153,7 @@ int32 OS_SocketAddrInit_Impl(OS_SockAddr_t *Addr, OS_SocketDomain_t Domain)
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_SocketAddrToString_Impl(char *buffer, uint32 buflen, const OS_SockAddr_t *Addr)
+int32 OS_SocketAddrToString_Impl(char *buffer, size_t buflen, const OS_SockAddr_t *Addr)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 } /* end OS_SocketAddrToString_Impl */

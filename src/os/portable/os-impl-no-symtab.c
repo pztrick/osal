@@ -52,7 +52,7 @@ int32 OS_GlobalSymbolLookup_Impl(cpuaddr *SymbolAddress, const char *SymbolName)
  *           See prototype for argument/return detail
  *
  *-----------------------------------------------------------------*/
-int32 OS_ModuleSymbolLookup_Impl(uint32 local_id, cpuaddr *SymbolAddress, const char *SymbolName)
+int32 OS_ModuleSymbolLookup_Impl(const OS_object_token_t *token, cpuaddr *SymbolAddress, const char *SymbolName)
 {
     return OS_ERR_NOT_IMPLEMENTED;
 
